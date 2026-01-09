@@ -230,7 +230,7 @@ fn repl() {
             
             "trace" => {
                 let enabled = parts.get(1)
-                    .map(|s| s == "on" || s == "1" || s == "true")
+                    .map(|s| *s == "on" || *s == "1" || *s == "true")
                     .unwrap_or(true);
                 vm.set_trace(enabled);
                 println!("Trace: {}", if enabled { "enabled" } else { "disabled" });

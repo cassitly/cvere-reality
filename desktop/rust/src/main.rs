@@ -296,11 +296,12 @@ fn test_loop() {
     println!("Test: Loop Counter");
     let mut vm = CVEREVM::new();
     let program = vec![
-        0xC100, // LOADI R1, 0x00
-        0xC20A, // LOADI R2, 0x0A
-        0x2101, // ADDI R1, 0x01
-        0x3321, // SUB R3, R2, R1
-        0xF3FD, // BNE R3, -3
+        0xC100, // LOADI R1, 0x00      ; Counter = 0
+        0xC20A, // LOADI R2, 0x0A      ; Limit = 10
+        // loop:
+        0x2101, // ADDI R1, 0x01       ; Counter++ (now R1 = 1, 2, 3...)
+        0x3321, // SUB R3, R2, R1      ; R3 = Limit - Counter
+        0xF3FD, // BNE R3, -3          ; If R3 != 0, jump back to ADDI
         0xFFFF, // HALT
     ];
     

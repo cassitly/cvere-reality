@@ -308,7 +308,7 @@ fn test_loop() {
     vm.load_program(&program, 0).unwrap();
     vm.run(1000).unwrap();
 
-    println!("R3: {}", vm.registers.read_gp(3))
+    println!("R3: {}", vm.registers.read_gp(3));
     
     assert_eq!(vm.registers.read_gp(1), 10, "R1 should be 10");
     assert!(vm.halted, "VM should be halted");

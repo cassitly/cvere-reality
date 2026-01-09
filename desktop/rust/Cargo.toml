@@ -1,6 +1,16 @@
 [package]
-name = "rust"
-version = "0.1.0"
-edition = "2024"
+name = "cvere"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "cvere"
+path = "src/main.rs"
 
 [dependencies]
+
+[dev-dependencies]
+
+[lib]
+name = "cvere"
+path = "src/lib.rs"

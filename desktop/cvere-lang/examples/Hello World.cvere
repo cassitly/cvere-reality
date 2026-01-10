@@ -1,0 +1,26 @@
+; Hello World program
+start:
+    LOADI R1, 0x01      ; Syscall: PrintChar
+    LOADI R2, 0x48      ; 'H'
+    SYSCALL
+    
+    LOADI R2, 0x65      ; 'e'
+    SYSCALL
+    
+    LOADI R2, 0x6C      ; 'l'
+    SYSCALL
+    SYSCALL             ; 'l'
+    
+    LOADI R2, 0x6F      ; 'o'
+    SYSCALL
+    
+    LOADI R1, 0x00      ; Syscall: Exit
+    LOADI R2, 0x00      ; Exit code 0
+    SYSCALL
+
+; Machine code:
+; 0xC101, 0xC248, 0xF400,
+; 0xC265, 0xF400,
+; 0xC26C, 0xF400, 0xF400,
+; 0xC26F, 0xF400,
+; 0xC100, 0xC200, 0xF400

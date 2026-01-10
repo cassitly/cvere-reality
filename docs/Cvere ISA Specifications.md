@@ -154,10 +154,10 @@ For operations requiring more complexity, use two consecutive words:
 
 | Opcode | Mnemonic | Format | Description |
 |--------|----------|--------|-------------|
-| 0xF0xx | CALL     | Extended | Function call |
-| 0xF1xx | RET      | Extended | Return from function |
-| 0xF2xx | PUSH     | Extended | Push to stack |
-| 0xF3xx | POP      | Extended | Pop from stack |
+| 0xFAxx | CALL     | Extended | Function call |
+| 0xFBxx | RET      | Extended | Return from function |
+| 0xFCxx | PUSH     | Extended | Push to stack |
+| 0xFDxx | POP      | Extended | Pop from stack |
 | 0xFFFF | HALT     | Special | Stop execution |
 
 ## Assembly Language Syntax

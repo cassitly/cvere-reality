@@ -38,10 +38,10 @@ class CVEREAssembler:
         'JMP': 0xD,
         'BEQ': 0xE,
         'BNE': 0xF,
-        'CALL': 0xF0,
-        'RET': 0xF1,
-        'PUSH': 0xF2,
-        'POP': 0xF3,
+        'CALL': 0xFA,
+        'RET': 0xFB,
+        'PUSH': 0xFC,
+        'POP': 0xFD,
         'HALT': 0xFF,
     }
     

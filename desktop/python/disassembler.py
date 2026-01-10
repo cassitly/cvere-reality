@@ -40,10 +40,10 @@ class CVEREDisassembler:
     }
     
     EXTENDED_OPCODES = {
-        0xF0: 'CALL',
-        0xF1: 'RET',
-        0xF2: 'PUSH',
-        0xF3: 'POP',
+        0xFA: 'CALL',
+        0xFB: 'RET',
+        0xFC: 'PUSH',
+        0xFD: 'POP',
     }
     
     R_TYPE = [0x1, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9]
